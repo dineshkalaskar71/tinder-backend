@@ -26,9 +26,9 @@ app.use("/", userRouter)
 connectdb()
     .then(() => {
         console.log("connected");
-        app.listen(200, () => {
-            console.log("listing on 200");
-        })
+       app.listen(200, "0.0.0.0", () => {
+  console.log("Listening on port 200");
+});
     }).catch(error => {
         console.log("error while connecting");
 
